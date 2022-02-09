@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Сайт мой великий</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		
+		var score =0;
+
+		function checkAnswer (inputId, ansvers){
+			var userAnsver = document.getElementById(inputId).value;
+			userAnsver = userAnsver.toLowerCase();
+			for(var i=0; i<ansvers.length; i++){
+				if(userAnsver == ansvers [i]){
+					score++;	
+					break;
+				}
+			}
+		}
+		function checkAnswers(){
+
+			checkAnswer("userAnsver1", ["яйцо","яйца"]);
+			checkAnswer("userAnsver2", ["ветер"]);
+			checkAnswer("userAnsver3", ["берег","берега"]);
+
+			alert ("Правильных ответов " + score );
+
+		}
+
+		
+
+
+	</script>
+</head>
+<body>
+<div class="header">
+	<a href="index.html">Главная</a>
+	<a href="#">Загадка</a>
+</div>
+
+<div class="contentWrap">
+	<div class="content">
+		<div class="centre">
+
+			<h1>Тестовые загадки</h1>
+
+			<div class ="box">
+
+				<p>Без замка, без крышки</p> 
+				<p>Сделан сундучок,</p>
+				<p>А внутри хранится</p> 
+				<p>Золота кусок?</p>
+				<input type="text" id="userAnsver1">
+				
+				<p>Без голоса кричит,</p>
+				<p>Без крыльев - а летает,</p>
+				<p>И безо рта свистит,</p>
+				<p>И без зубов кусает.</p>
+				<input type="text" id="userAnsver2">
+
+				<p>Два братца в воду глядятся,</p> 
+				<p>Век не сойдутся.</p>
+				<input type="text" id="userAnsver3">
+
+				<br>
+				<a href="#"onclick="checkAnswers();">Ответить</a>
+
+
+</body>
+</html>
